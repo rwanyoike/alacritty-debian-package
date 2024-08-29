@@ -7,7 +7,7 @@ override_dh_auto_clean:
 	cargo clean
 
 override_dh_auto_build:
-	cargo build --release
+	cargo build --release --no-default-features --features=x11
 
 override_dh_auto_install:
 	mkdir -p debian/alacritty/usr/share/man/man1
